@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+语文：<input type="text" id="ch"><br>
+数学：<input type="text" id="ma"><br>
+英语：<input type="text" id="En"><br>
+<input type="button" value="确定" id="submit">
+</body>
+<script>
+    submit.onclick=function () {
+        if (ch.value<0 || ma.value<0 || En.value<0||
+            ch.value >100 || ma.value >100 || En.value>100){
+            alert("错了，打死")
+            ch.value=''
+            ma.value=''
+            En.value=''
+        }else if(ch.value >=90 && ma.value >=90 && En.value>=90){
+            alert("奖励一架钢琴")
+        }else if((!Number(ch.value))||
+            (!Number(ma.value))||(!Number(En.value))){
+            alert("友程你傻逼啊")
+            ch.value=''
+            ma.value=''
+            En.value=''
+        }else{
+            alert("打一顿")
+            ch.value=''
+            ma.value=''
+            En.value=''
+        }
+
+    }
+</script>
+</html>

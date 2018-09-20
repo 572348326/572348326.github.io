@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>请输入一个4位数的会员号</p>
+<input type="text" id="num">
+<input type="button" id="submit" value="确定">
+</body>
+<script>
+        submit.onclick=function(){
+        var v=num.value
+        var ge,shi,bai,qian;
+        ge=v%10
+        shi=parseInt(v/10)%10
+        bai=parseInt(v/100)%10
+        qian=parseInt(v/1000)
+        if (parseInt(v)!==Number(v)){
+            alert("输入错误！！请重新输入")
+            num.value=''
+        }else if(ge+shi+bai+qian>20){
+            alert("恭喜你！！成为幸运会员")
+            num.value=''
+            }else{
+            alert("很遗憾，继续努力")
+            num.value=''
+        }
+        }
+
+</script>
+</html>

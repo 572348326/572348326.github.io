@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+请输入一个带分解质因数的数字: <input type="text" id="inputValue">
+<input type="button" id="submit" value="提交">
+</body>
+<script>
+    var inputValue=document.getElementById("inputValue")
+    var submit=document.getElementById("submit")
+    submit.onclick=function () {
+        var num=parseInt(inputValue.value)
+        var count=1;
+        if(num&&num>1){
+            for(var k=2;k<=num;k++){
+                if(num%k === 0){
+                    count++
+                }
+            }
+            if(count<=2){
+                alert("这是一个质数，不能分解质因数")
+                inputValue.value=''
+                return
+
+            }
+            document.write("分解质因数结果："+num+"=")
+            for(var i=2,temp=num;i<=temp;i++){
+                if(temp%i===0){
+                    if(i===temp){
+                        document.write(i)
+                    }else{
+                        document.write(i+"*")
+                    }
+                    temp /=i
+                    i --
+                }
+            }
+        }else{
+            alert("输入错误,必须输入非零非1的正整数！")
+            inputValue.value=''
+        }
+    }
+
+
+
+</script>
+</html>

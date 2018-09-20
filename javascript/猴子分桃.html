@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猴子分桃</title>
+</head>
+<body>
+<!--【思路】要求海滩上最少的桃子总数，那么保证分了5次，，而且最少一次
+要保证至少每只猴子分到一个桃子还多一个，也就是说最少要有6个桃子
+但是其实6个桃子根本是不可以的。11个桃子。。16个桃子，所以继续尝试
+从6----11----16-----21每次增加5个桃子的数字去继续尝试，知道满足
+可以按照题意分5次为止
+-->
+</body>
+<script>
+    var peachNcm=6
+    while(1){
+        var temp=peachNcm
+        var monkey=0
+        while(1){
+            //如果根本不能满足这个初始条件就直接pass，开始判断下一个数字
+            if(temp%5==1){
+                temp=(temp-1)/5*4
+                //每成功分了一次就记录一次
+                monkey++
+            }else{
+                //结束循环（退出最近的循环
+                break
+            }
+        }
+        if(monkey===5){
+            break
+        }
+        peachNcm+=5
+    }
+    alert("海滩上原来至少有"+peachNcm+"个桃子")
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+    <style>
+        div{
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            background: chartreuse;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<script>
+    for(var i=1;i<9;i++){
+        for(var j=1;j<=i;j++){
+            var str=(j+1)+"*"+(i+1)+"="+((i+1)*(j+1))+"&nbsp;"
+            document.write("<div>"+str+"</div>")
+        }
+        document.write("<br/>")
+    }
+</script>
+</body>
+</html>

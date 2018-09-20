@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+请输入一个年份：<input type="text" id="inputYear">
+                <input type="submit" id="submit" value="判断">
+</body>
+<script>
+    submit.onclick=function () {
+        var year=parseInt(inputYear.value)
+        isLeapYear(year)
+    }
+    function isLeapYear(year){
+        if(parseInt(year)!=Number(year)){
+                alert("输入错误！！这不是一个年份")
+        }else if(year%4===0&&year%100!=0||year%400===0){
+            alert(year+"年是闰年")
+            inputYear.value=''
+        }else{
+            alert(year+"年是平年")
+            inputYear.value=''
+        }
+    }
+</script>
+</html>

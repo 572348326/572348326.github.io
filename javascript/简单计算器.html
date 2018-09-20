@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="box1">
+<select name="" id="s">
+    <option value="add">+</option>
+    <option value="sub">-</option>
+    <option value="mul">*</option>
+    <option value="div">/</option>
+</select>
+<input type="text" id="box2">
+<span>=</span>
+<input type="text " id="result"><br>
+<input type="button" id="btn" value="计算">
+<script>
+    btn.onclick=function(){
+        var ss=s.value
+        var a=parseInt(box1.value)
+        var b=parseInt(box2.value)
+        var x;
+        switch (ss) {
+            case "add":
+                x=a+b
+                break;
+            case "sub":
+                x=a-b
+                break;
+            case "mul":
+                x=a*b
+                break;
+            case "div":
+                x=a/b
+                break;
+        }
+       result.value=x;
+    }
+</script>
+</body>
+</html>

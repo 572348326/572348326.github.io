@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4位字母验证码</title>
+    <script type="text/javascript">
+        function checkCodeofRandom(){
+            // 所需随机抽取的样本数组
+            var nums=new Array("q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","A","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M","0","1","2","3","4","5","6","7","8","9");
+            // 初始化 拼接字符串
+            var str="";
+            //颜色需要的数组元素
+            var nums1=new Array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
+            var n1="";
+            //字号需要的数组元素
+            var nums2=new Array("1","2","3","4","5","6","7");
+            var n2;
+            for(i=0;i<6;i++){
+                //遍历拼接颜色色值 eg 000000
+                for(var j=0;j<6;j++){
+                    var k=Math.floor(Math.random()*100)%16;
+                    n1=n1+nums1[k];
+                }
+                //每次生成一个随机的字号
+                var o=Math.floor(Math.random()*100)%8;
+                n2=nums2[o];
+                //每次生成一个0 - 61 之间的 number 作为随机获取验证码的下标
+                var p=Math.floor(Math.random()*1000)%62;
+                //拼接验证码  随机颜色 随机字号 随机抽取大小写字母和数字
+                str+="<font color='#"+n1+"' size='"+n2+"'>"+nums[p]+"</font>"
+            }
+            document.getElementById("checkCode").innerHTML = str;
+        }
+
+    </script>
+</head>
+<body>
+<div id = 'checkCode' style="width:100px; float: left; "></div>
+<button id = "btn" onclick="checkCodeofRandom()">获取验证码</button>
+</body>
+</html>

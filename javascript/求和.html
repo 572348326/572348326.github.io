@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求阶乘之和</title>
+</head>
+<body>
+<script>
+            var sum=0
+    for(var i=1;i<=10;i++){
+                var jie=1
+        for(var j=1;j<=i;j++){
+                    jie *=j
+        }
+        document.write("第"+i+"个阶乘等于"+jie+"<br/>")
+            sum +=jie
+    }
+            document.write("和等于"+sum)
+</script>
+</body>
+</html>

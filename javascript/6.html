@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+性别：<input type="text" id="sex">
+        <input type="button" id="submit" value="确定">
+    </body>
+    <script>
+    submit.onclick=function(){
+        if(sex.value !=="男" && sex.value !=="女"){
+            alert("友程你是人妖啊")
+            sex.value=''
+        }else{
+            alert(sex.value)
+            sex.value=''
+        }
+    }
+</script>
+</html>
