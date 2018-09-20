@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>太极</title>
+    <style>
+        .bigCircle{
+            width: 200px;
+            height: 200px;
+            border-radius:100px;
+            /*background: #1b1a1a;*/
+            margin-left: 300px;
+            margin-top: 150px;
+            border: 1px  black solid;
+            position: relative;
+            /*animation: spin 6s linear infinite;*/
+            transform-origin: 100px 100px;
+            animation: run 1s linear infinite;box-shadow: 0 0 50px #707070;
+        }
+
+        @keyframes run{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .leftCircle{
+            width: 100px;
+            height: 200px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            background-color: black;
+            position: absolute;
+            left: 0px;
+        }
+        .rightCircle{
+            width: 100px;
+            height: 200px;
+            border-radius: 0 100px 100px 0;
+            padding-top: 0;
+            float:right;
+            background-color:white;
+            position: absolute;
+            right: 0px;
+        }
+        .bottomCircle{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            bottom:0px;
+            left: 50px;
+            background-color: white;
+        }
+        .bottomsmallCircle{
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            margin: 40px;
+            background-color: black;
+        }
+        .topCircle{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 50px;
+            border-radius: 50px;
+            background: black;
+        }
+        .topsmallCircle{
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            margin: 40px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="bigCircle">
+    <div class="leftCircle"></div>
+    <div class="rightCircle"></div>
+    <div class="bottomCircle">
+        <div class="bottomsmallCircle"></div>
+    </div>
+        <div class="topCircle">
+        <div class="topsmallCircle"></div>
+    </div>
+
+</div>
+</body>
+</html>

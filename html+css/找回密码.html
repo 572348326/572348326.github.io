@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录/找回登录密码</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+      .zhuti{
+          width: 100%;
+          height: 616px;
+          /*background: #000;*/
+      }
+        .top{
+            width: 100%;
+            height: 59px;
+            /*background: red;*/
+           text-align: center;
+            border-bottom: 2px solid #2db8ab;
+
+        }
+        .bm{
+            width: 900px;
+            height: 59px;
+            /*background: blue;*/
+display: inline-block;
+        }
+        .site-logo{
+            float: left;
+            margin-top:  11px;
+
+        }
+.bm_r{
+    float: right;
+}
+.fl{
+    color: #666;
+    font-size: 13px;
+    top: 21px;
+    right: 234px;
+   position: absolute;
+}
+        .button{
+            width: 46px;
+            height: 27px;
+            top: 17px;
+            position: absolute;
+            right: 182px;
+            font-size: 12px;
+            background: #30c0b2;
+            border: 1px solid #30c0b2;
+            color: white;
+            cursor: pointer;
+        }
+        .content{
+            width: 900px;
+            height: 416px;
+            /*background: red;*/
+            margin: 50px auto;
+        }
+        .headline{
+            color: #333;
+            font-size: 18px;
+            border-bottom: 2px solid #DDD;
+
+        }
+        .headline .headline_content{
+        display: inline-block;
+        margin-bottom: -2px;
+        border-bottom: 2px solid #333;
+        padding: 12px 0;
+        }
+        .vf{
+           margin-top: 20px;
+        }
+         .bar{
+            display: inline-block;
+            width: 245px;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #ff8900;
+        }
+        .post{
+            display: inline-block;
+            width: 213px;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #dedede;
+        }
+        .form-wrapper{
+            border: 1px solid #DDD;
+            padding: 67px 0 58px;
+            /* background: #FFF; */
+        }
+        .form_content{
+            margin: 0 auto;
+            width: 400px;
+        }
+        .form-field{
+            position: relative;
+            padding: 8px 0 8px 110px;
+            /*zoom: 1;*/
+        }
+.form-field label{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    padding-top: 6px;
+    font-size: 14px;
+    text-align: right;
+    color: #333;
+}
+.form-field .f-text{
+    width: 248px;
+    height: 24px;
+    padding: 2px;
+    border: 1px solid #aaa;
+    line-height: 24px;
+    vertical-align: top;
+}
+        .b-text{
+            width: 100px;
+            height: 24px;
+            border: 1px solid #aaa;
+            float: left;
+        }
+        .captcha-img{
+            float: left;
+            height: 24px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .cf{
+            font-size: 12px;
+            text-decoration: none;
+            color: #2bb8aa;
+        }
+        .btn{
+            background: #2db3a6;
+            border-bottom: 2px solid #028278;
+            width: 75px;
+            height: 35px;
+            border-top:0px;
+            border-left:0px;
+            border-right:0px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .mini{
+            border-top: 1px solid #EEE;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+
+        }
+        a{
+            text-decoration: none;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="zhuti">
+    <div class="top">
+        <div class="bm">
+                <a href="http://gz.meituan.com/" class="site-logo"><img src="../images/logo.png" alt="" style="width:54px;height: 36px"></a>
+            <div class="bm_r">
+                <span class="fl">已有美团账号？</span>
+                <a href="美团.html"><input type="button" class="button" value="登陆"></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h3 class="headline">
+            <span class="headline_content">找回登陆密码</span>
+        </h3>
+        <div class="vf">
+            <span class="bar">1.确认账号</span>
+            <span class="post">2.选择验证方式</span>
+            <span class="post">3.验证/修改</span>
+            <span class="post">4.完成</span>
+        </div>
+        <div class="form-wrapper">
+            <form action="" class="form_content">
+                <div class="form-field">
+                    <label>美国账户</label>
+                    <input type="text" class="f-text" placeholder="手机号/用户名/邮箱">
+                </div>
+                <div class="form-field">
+                    <label>验证码</label>
+                    <input type="text" class="b-text">
+                    <img src="../images/captcha.png" alt="" class="captcha-img">
+                    <a href="" class="cf">看不清楚？换一张</a>
+
+                </div>
+                <div class="form-field">
+                    <input type="button" value="下一步" class="btn">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <footer class="mini">
+       <a href="http://gz.meituan.com/"> &copy;meituan.com</a>&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/">京ICP070791</a> 京公网安备11010502025545号
+    </footer>
+</div>
+</body>
+</html>
