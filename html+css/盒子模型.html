@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<!--<link rel="stylesheet" type="text/css" href="盒子模型.css"/>-->
+<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+<style type="text/css">
+	.chat{
+		width: 80%;
+		background: #edf2f9;
+		min-width: 420px;
+		max-width: 800px;
+		margin: 10px auto;
+		padding: 10px;
+		border-radius:10px ;
+	}
+	.wrapper{
+		width: 100%;
+		height: 360px;
+		background: transparent;
+		border-radius:10px;
+	}
+	.wrapper .message{
+		text-align:right ;
+		font-size: 0;
+	}
+	.bubble{
+		font-size: 16px;
+		display: inline-block;
+		max-width: 60%;
+		background: #009bdb;
+		color: white;
+		margin: 10px 0;
+		padding: 10px;
+		border-radius: 8px;
+	}
+	.tail{
+	 		display: inline-block;
+            height:0;
+            /*width: 35px;*/
+            border:10px solid #009bdb;
+            /*border-left-color: red;*/
+            /*background: #3d444c;*/
+            border-right: none;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+	
+	}
+	.line{
+		border-top: 1px solid #777;
+	}
+	.msg{
+		width: 100%;
+		background: transparent;
+		border: none;
+		outline: none;
+		padding-left:5px ;
+		margin-bottom: 5px;
+		
+	}
+	.btn-warpper{
+		text-align: right;
+	}
+	.send{
+		display: inline-block;
+		width: 70px;
+		height: 24px;
+		font-size: 12px;
+		color: white;
+		background: #009bdb;
+		border-radius:4px ;
+		text-align: center;
+		line-height: 24px;
+	}
+	.send:hover{
+		background: #00b6ff;
+		
+	}
+	.line ul li{
+    display:inline-block;
+    margin: 0 auto;
+    width:37px ;
+    height:37px ;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.line ul li:hover{
+     background:#0b73f3;
+
+ }
+.line ul i{
+    display: inline-block;
+    color: #000;
+    font-size: 22px;
+}
+
+</style>
+</head>
+<body>
+<!--<div class="box1">这是盒子1的内容</div>
+<div class="box2">这是盒子2的内容</div>
+<hr /> 
+<div class="box3"></div>
+<div class="box4"></div>-->
+<div class="chat">
+	<div class="wrapper">
+		<div class="message">
+			<div class="bubble">你好</div>
+			<div class="tail"></div>
+		</div>
+	</div>
+	<div class="line">
+		<div class="ee">
+		<ul>
+
+				<li><a href="#" title="选择热图"></a></li>
+				<li><a href="#" title="屏幕截图"></a></li>
+				<li><a href="#" title="上传文件"></a></li>
+				<li><a href="#" title="发送本地图片"></a></li>
+				<li><a href="#" title="匿名聊天"></a></li>
+				<li><a href="#" title="送礼物"></a></li>
+				<li><a href="#" title="发红包"></a></li>
+			</ul>
+		<textarea class="msg"></textarea>
+	</div>
+	</div>
+	<div class="btn-warpper">
+		<div class="send">发送</div>
+	</div>
+</div>
+</body>
+</html>

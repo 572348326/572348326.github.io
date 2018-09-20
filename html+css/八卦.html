@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>八卦</title>
+		<style>
+			.bigCircle{
+				height: 200px;
+				width: 200px;
+				background: red;
+				border-radius: 50%;
+				position: relative;
+				border: 1px solid black;
+				left: 250px;
+				top: 100px;
+				animation: run 0.5s linear infinite;box-shadow: 0 0 200px #ff8c0b;
+			}
+			.leftCircle{
+				width: 100px;
+				height: 200px;
+				position: absolute;
+				background: black;
+				border-top-left-radius: 100px;
+				border-bottom-left-radius: 100px;
+				
+			}
+			.rightCircle{
+				width: 100px;
+				height: 200px;
+				background:white;
+				position: absolute;
+				right: 0px;
+				border-radius: 0px 100px 100px 0px;
+			}
+			.bottomCircle{
+				width: 100px;
+				height: 100px;
+				background: white;
+				border-radius: 50px;
+				position: absolute;
+				bottom: 0px;
+				right: 50px;
+			}
+			.bottomsmallCircle{
+				width: 20px;
+				height: 20px;
+				background: black;
+				border-radius: 10px;
+				/*position: absolute;*/
+				margin:40px 40px 40px 40px ;
+			}
+			.topCircle{
+				width: 100px;
+				height: 100px;
+				background: black;
+				border-radius: 50px;
+				position: absolute;
+				right: 50px;
+			}
+			.topsmallCircle{
+				width: 20px;
+				height: 20px;
+				background: white;
+				border-radius: 10px;
+				/*position: absolute;*/
+				margin: 40px;
+			}
+			@keyframes run{
+				from{
+					transform:rotate(0deg);
+				}
+				to{
+					transform:rotate(360deg);
+				}
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bigCircle">
+			<div class="leftCircle"></div>
+			<div class="rightCircle">
+				
+			</div>
+			<div class="bottomCircle">
+				<div class="bottomsmallCircle"></div>
+			</div>
+			<div class="topCircle">
+				<div class="topsmallCircle"></div>
+			</div>
+		</div>
+	</body>
+</html>

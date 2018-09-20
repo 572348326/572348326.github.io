@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/login.css"/>
+	</head>
+	<body>
+		<div class="container-fluid text-center">
+			<div class="loginDiv">
+				<h3>登录页面</h3>
+				<form class="form-horizontal"id="loginForm">
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3">用户名：</label>
+						<div class="input-group col-sm-7 col-xs-6">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input type="text" name="username" id="name" class="form-control" placeholder="请输入用户名"/>
+							<label class="errorLab"></label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3">密码：</label>
+						<div class="input-group col-sm-7 col-xs-6">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input type="password" name="password" id="pwd" class="form-control" placeholder="请输入密码"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-sm-offset-1 col-xs-3">验证码：</label>
+						<div class="inputIDcode col-sm-4 col-xs-3">
+							<input type="text" name="idcode" id="code" class="form-control" placeholder="请输入验证码"/>
+						</div>
+						<div class="showCode col-sm-2 col-xs-2">
+						</div>
+					</div>
+					<input type="submit" id="loginBtn" class="btn btn-primary btn-group-sm" value="登录"/>
+				</form>
+			</div>
+		</div>
+		<div class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal"><span>&times;</span></button>
+						登录提示
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-dismiss="modal" id="confirmBtn">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="lib/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="lib/js/jquery.validate.min.js"></script>
+	<!--<script src="lib/js/jquery-validate.bootstrap-tooltip.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="lib/js/login.js" type="text/javascript" charset="utf-8"></script>
+</html>

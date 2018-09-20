@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/index.css"/>
+	</head>
+	<body>
+		<!--导航栏-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topmenu">
+						<i class="icon-bar"></i>
+						<i class="icon-bar"></i>
+						<i class="icon-bar"></i>
+					</button>
+					<a href="#" class="navbar-brand">LOGO</a>
+				</div>
+				<div class="collapse navbar-collapse" id="topmenu">
+					<ul class="nav navbar-nav">
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">产品中心</a></li>
+						<li><a href="#">新闻中心</a></li>
+						<li><a href="#">权限管理</a></li>
+						<li><a href="#">分类管理</a></li>
+					</ul>
+					<form class="navbar-form navbar-left hidden-md hidden-sm hidden-xs">
+						<div class="input-group">
+							<input type="text" class="form-control" />
+							<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown"><a href="#" data-toggle="dropdown">设置<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">个人信息</a></li>
+								<li><a href="#">修改密码</a></li>
+								<li><a href="#">站内信息</a></li>
+								<li class="divider"></li>
+								<li><a href="#">退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+					<p class="navbar-text navbar-right">欢迎<a href="#" class="navbar-link">OM</a></p>
+				</div>
+			</div>
+		</div>
+		<!--end-->
+		
+		<div class="container-fluid leftList">
+			<div class="row">
+				<div class="col-sm-2 navbar-inverse leftListDiv">
+					<div class="panel-group" id="leftUl">
+						<div class="panel leftPanel">
+							<div class="panel-heading">
+								<a class="collapsed" href="#" data-toggle = "collapse" data-parent = "#leftUl" data-target = "#user"><i class="glyphicon glyphicon-user listicon"></i>用户管理<i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+							</div>
+							<div id="user" class="list-group collapse">
+								<a href="#userList" class="list-group-item" data-toggle="tab"></i>用户列表</a>
+								<a href="#addUser" class="list-group-item" data-toggle="tab">添加用户</a>
+								<a href="#" class="list-group-item">删除用户</a>
+								<a href="#" class="list-group-item">修改用户</a>
+							</div>
+						</div>
+						<div class="panel leftPanel">
+							<div class="panel-heading">
+								<a class="collapsed" href="#" data-toggle="collapse" data-parent = "#leftUl" data-target = "#content"><i class="glyphicon glyphicon-user listicon"></i>内容管理<i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+							</div>
+							<div class="list-group collapse" id="content">
+								<a href="#" class="list-group-item">内容列表</a>
+								<a href="#" class="list-group-item">添加内容</a>
+								<a href="#" class="list-group-item">删除内容</a>
+								<a href="#" class="list-group-item">修改内容</a>
+							</div>
+						</div>
+						<div class="panel leftPanel">
+							<div class="panel-heading">
+								<a class="collapsed" href="#" data-toggle="collapse" data-parent = "#leftUl" data-target = "#product"><i class="glyphicon glyphicon-user listicon"></i>商品管理<i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+							</div>
+							<div class="list-group collapse" id="product">
+								<a href="#" class="list-group-item">商品列表</a>
+								<a href="#" class="list-group-item">添加商品</a>
+								<a href="#" class="list-group-item">删除商品</a>
+								<a href="#" class="list-group-item">修改商品</a>
+							</div>
+						</div>
+						<div class="panel leftPanel">
+							<div class="panel-heading">
+								<a class="collapsed" href="#" data-toggle="collapse" data-parent = "#leftUl" data-target = "#product1"><i class="glyphicon glyphicon-user listicon"></i>商品管理<i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+							</div>
+							<div class="list-group collapse" id="product1">
+								<a href="#" class="list-group-item">商品列表</a>
+								<a href="#" class="list-group-item">添加商品</a>
+								<a href="#" class="list-group-item">删除商品</a>
+								<a href="#" class="list-group-item">修改商品</a>
+							</div>
+						</div>
+						<div class="panel leftPanel">
+							<div class="panel-heading">
+								<a class="collapsed" href="#" data-toggle="collapse" data-parent = "#leftUl" data-target = "#product2"><i class="glyphicon glyphicon-user listicon"></i>商品管理<i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+							</div>
+							<div class="list-group collapse" id="product2">
+								<a href="#" class="list-group-item">商品列表</a>
+								<a href="#" class="list-group-item">添加商品</a>
+								<a href="#" class="list-group-item">删除商品</a>
+								<a href="#" class="list-group-item">修改商品</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-10 tab-content rightContent">
+					<div class="container-fluid tab-pane" id="userList">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>用户列表</h4>
+							</div>
+							<div class="panel-body">
+								<form class="form-inline">
+									<div class="form-group">
+										<!--<label class="control-label">筛选栏</label>-->
+										<select class="form-control">
+											<option hidden selected>分类</option>
+											<option value="xx">xx</option>
+											<option value="xxx">xxx</option>
+											<option value="yy">yy</option>
+											<option value="yyy">yyy</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<!--<label class="control-label">搜索</label>-->
+											<input type="text" class="form-control"/>
+											<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+										</div>									
+									</div>
+								</form>
+							</div>
+							<div class="table-responsive">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>用户名</th>
+											<th>密码</th>
+											<th>年龄</th>
+											<th>性别</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>aaa</td>
+											<td>123</td>
+											<td>123@qq.com</td>
+											<td>12315</td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-footer">
+								<ul class="pagination pull-right">
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid tab-pane" id="addUser">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>添加用户</h4>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label class="control-label col-sm-2">用户名</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">密码</label>
+										<div class="col-sm-7">
+											<input type="password" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">重复密码</label>
+										<div class="col-sm-7">
+											<input type="password" class="form-control"/>
+										</div>									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">邮箱</label>
+										<div class="col-sm-7">
+											<input type="password" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">电话</label>
+										<div class="col-sm-7">
+											<input type="password" class="form-control"/>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="panel-footer">
+								<button class="btn btn-primary pull-right">确认添加</button>
+								<button class="btn btn-primary pull-right">清空数据</button>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="lib/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/js/user.js" type="text/javascript" charset="utf-8"></script>
+</html>
