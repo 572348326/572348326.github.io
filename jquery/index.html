@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5</title>
+	<style>
+	label.error{
+		color:red;
+		font-size:12px;
+	}
+	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+	<form id="loginForm">
+		<label>邮箱:</label>
+		<input type="text" name="email"/><br/><br/>
+		<label>密码:</label>
+		<input type="password" id="password"  name="password"/><br/><br/>
+		<label>确认密码:</label>
+		<input type="password" name="confirmpassword"/><br/><br/>
+		<label>生日:</label>
+		<input type="text" name="birthday"/><br/><br/>
+		<label>年龄:</label>
+		<input type="text" name="age"/><br/><br/>
+		<input type="submit" value="登录"/>
+	</form>
+	<script type="text/javascript">
+	$(function(){
+		$('#loginForm').validate({
+			//验证规则
+			rules:{
+				email:{
+					//具体的验证规则
+					required:true,//不允许为空
+					rangelength:[3,10],//rangelength规则 数据的长度为3-10位
+					email:true
+				},
+				birthday:{
+					dateISO:true
+				},
+				age:{
+					digits:true,
+					range:[12,60]
+				},
+				password:{
+					required:true,
+					rangelength:[6,20]
+				},
+				confirmpassword:{
+					equalTo:'#password'
+				}
+			},
+			//验证不通过的时候的提示消息
+			messages:{
+				password:{
+					required:"密码不能为空",
+					rangelength:'密码长度为6-20位'
+				},
+				confirmpassword:{
+					equalTo:"两次输入的密码不一致"
+				},
+				email:{
+					required:'账号不允许为空',
+					rangelength:'账号长度为3-10位字符',
+					email:'邮件格式错误!'
+				},
+				birthday:{
+					dateISO:"生日格式不正确"
+				},
+				age:{
+					digits:'年龄必须是数字',
+					range:"年龄范围是12-60岁之间"
+				}
+			}
+		});
+	});
+	</script>
+</body>
+</html>

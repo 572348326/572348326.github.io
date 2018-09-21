@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#outer{
+				position: relative;
+			}
+			.list{
+				/*background-color: yellowgreen;*/
+			}
+			.list img{
+				border: 1px solid #CCCCCC;
+			}
+			.list img:hover{
+				border: 1px solid red;
+			}
+			.enlarge{
+				display: none;
+				position: absolute;
+			}
+			.enlarge img{
+				border: 1px solid #CCCCCC;
+				width: 300px;
+				height: 350px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div class="list">
+				<img src="images/shirt_1.jpg" id="1"/>
+				<img src="images/shirt_2.jpg" id="2"/>
+				<img src="images/shirt_3.jpg" id="3"/>
+				<img src="images/shirt_4.jpg" id="4"/>
+			</div>
+			<div class="enlarge">
+				<img src="images/shirt_1_big.jpg"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var list = document.getElementsByClassName("list")[0]
+		var enlarge = document.getElementsByClassName("enlarge")[0]
+		var bigImg = enlarge.getElementsByTagName("img")[0]
+		//监听鼠标放到某个元素上
+		list.onmouseover = function(e){
+			enlarge.style.display = "block"
+		}
+		list.onmouseout = function(e){
+			enlarge.style.display = "none"
+		}
+		list.onmousemove = function(e){
+			var imgId = +e.target.id
+			console.log(imgId)
+			var src = ''
+			switch(imgId){
+				case 1:
+				  src = "images/shirt_1_big.jpg";
+				  break;
+				case 2:
+				  src = "images/shirt_2_big.jpg";
+				  break;
+				case 3:
+				  src = "images/shirt_3_big.jpg";
+				  break;
+				case 4:
+				  src = "images/shirt_4_big.jpg";
+				  break;
+				default:
+				  break;
+			}
+			//console.log(src)
+			bigImg.setAttribute("src",src)
+			enlarge.style.left = e.clientX + "px"
+			enlarge.style.top = e.clientY + "px"
+		}
+	</script>
+</html>

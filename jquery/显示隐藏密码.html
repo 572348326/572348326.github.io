@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<a href="" target="" ></a>
+	<label>账号：</label><input type="text"/><br/>
+	<label>密码：</label><input type="password" value="" /><a href="javascript:void(0)">显示/隐藏密码</a><br/>
+	<input type="checkbox" checked="checked">同意网站的使用协议
+</body>
+<script>
+	$(function(){
+		$('a').click(function(){
+			var type=$(':password').attr('type')
+				if(type=="password"){
+					$(':password').attr('type','text')
+				}else{
+						$(':text:eq(1)').attr('type','password')
+				}
+		});
+		// $(':checkbox').click(function(){
+		// 	var attrChecked=$(this).attr('checked')
+		// 	console.log('attr==>checked',attrChecked)
+		// 	var propChecked=$(this).prop('checked')
+		// })
+	});
+</script>
+</html>

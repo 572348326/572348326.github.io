@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="time"></h1>
+		<script type="text/javascript">
+			//显示时间，每秒钟变化一次
+			window.setInterval(function(){
+				var timeElement=document.getElementById("time");//找到h1标签
+				var msg=new Date().toLocaleString();
+				timeElement.innerHTML=msg;//设置h1标签中的值
+				
+			},500)
+			//取消定时器
+//			clearInterval(function)
+		</script>
+	</body>
+	<!--清除间隔定时器-->
+	
+</html>

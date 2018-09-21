@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/city.js"></script>
+</head>
+<body>
+	<select id="province">
+		
+	</select>
+	<select id="city">
+		
+	</select>
+	<select id="area">
+		
+	</select>
+
+</body>
+<script type="text/javascript">
+	$(function(){
+		var provinceStr=''
+		for(var i in citiesall){
+			provinceStr+='<option>'+citiesall[i].name+'</option>'
+		}
+		$('#province').html(provinceStr).change(function(){
+				var provinceName=$(this).val()
+				for(var j in citiesall){
+					//查找省份
+					if(citiesall[j].name==provinceName){
+						//找出city
+						var cities=citiesall[j].city
+						var cityStr=''
+						for(var n in cities){
+							cityStr+='<option>'+cities[n].name+'</option>'
+						}
+						$('#city').html(cityStr).change(function(){
+							var cityName=$(this).val()
+							for(var m in cities){
+								if(cities[m].name==cityName){
+									var areas=cities[m].area
+									var areaStr=''
+									for(var x in areas){
+										areaStr+='<option>'+areas[x]+'</option>'
+									}
+									$('#area').html(areaStr)
+								}
+							}
+						})
+					}
+				}
+		})
+	})
+</script>
+</html>

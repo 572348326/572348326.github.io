@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			手机号码：<input type="text" name="number"/>
+			<span></span><br />
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var inputs=document.getElementsByTagName("input")
+		document.querySelector("form").onsubmit=function(event){
+			var number=inputs[0].value
+			var reg=/1[34578]\d{9}$/g
+			if(!reg.test(number)){
+				event.preventDefault()
+				document.querySelector("span").innerHTML="请输入正确的手机号码"
+		}
+		}
+	</script>
+</html>
