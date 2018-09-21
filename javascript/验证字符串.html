@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//功能：验证字符串是否满足要求
+		function isRight(s){
+			if(s.length < 4 || s.length > 16){
+				alert("长度必须在4--16位，你目前的长度是：" + s.length)
+				return false
+			}
+			for(var i = 0,len = s.length;i < len;i ++){
+				var c = s.charAt(i)
+				if(i === 0 && c >= '0' && c <= '9'){
+					alert("第一个不能是数字")
+					return false
+				}
+				if(i >= 0 && !((c >= 'a'&& c <= 'z') || (c >= 'A'&& c <= 'Z') || c == "_" || 
+				(c >= '0' && c <= '9'))){
+					alert("必须是数字字母或者下划线")
+					return false
+				}
+			}
+			return true
+		}
+		//验证字符串是否合法
+		alert(isRight("%hafg%88_dhfgjd"))
+	</script>
+</html>

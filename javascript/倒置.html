@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//自定义一个字符串逆转的方法   jdfkslfhd
+		function reverse_1(s){
+			var r = ''
+			for(var i = s.length - 1; i >= 0; i --){
+				r += s.charAt(i)
+			}
+			return r
+		}
+		function reverse_2(s){
+			return s.split("").reverse().join("")
+		}
+		//alert(reverse_1("iOS Android HTML5 Java"))
+		alert(reverse_2("iOS Android HTML5 Java"))
+	</script>
+</html>

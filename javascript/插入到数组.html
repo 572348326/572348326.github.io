@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--有一个从大到小排好序的数组{99，85，82，63，60}。
+    现从页面输入一个数，要求按原来的规律将它插入数组中。
+    假设你输入的80，则应该插入到82和63之间。-->
+
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="numInput"/>
+		<button id="btn">插入</button>
+	</body>
+	<script type="text/javascript">
+		var arr=[99,85,82,63,60]
+		console.log("插入前："+arr);
+		btn.onclick=function(){
+			var numInputValue=parseInt(numInput.value)
+			for(var i=0,len=arr.length;i<len;i++){
+				if(arr[i]<numInputValue){
+					arr.splice(i,0,numInputValue)
+					break
+				}
+				if(i===arr.length-1){
+				arr.push(numInputValue)
+			}
+		}
+			numInput.value=''
+			console.log("插入后："+arr)
+	}		
+		
+	</script>
+</html>
