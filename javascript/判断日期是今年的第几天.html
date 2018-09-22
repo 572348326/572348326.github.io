@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				width: 50px;
+				height: 25px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		请输入一个日期：<input type="text" id="inputYear"/> -
+		<input type="text" id="inputMonth"/> -
+		<input type="text" id="inputDay"/>
+		<input type="submit" id="submit" value="判断"/>
+	</body>
+	<script type="text/javascript">
+		submit.onclick = function(){
+			var year = parseInt(inputYear.value)
+			var month = parseInt(inputMonth.value)
+			var day = parseInt(inputDay.value)
+			inputYear.value = ''
+			inputMonth.value = ''
+			inputDay.value = ''
+			//函数的调用
+			alert(sumDay(year,month,day))
+		}
+		//判断是否是闰年
+		function isLeapYear(year){
+			if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+				return true
+			}else{
+				return false
+			}
+		}
+		//计算某一天是一年中的第几天的函数
+		function sumDay(year,month,day){
+			//计算天数的和
+			var sum = 0;
+			//定义一个数组
+			var arrDay = [31,28,31,30,31,30,31,31,30,31,30,31]
+			//判断是否是闰年
+			//如果是闰年
+			if(isLeapYear(year)){
+				arrDay[1] = 29
+			}
+			//计算总天数   2018-7-20
+			for(var i = 0;i < month - 1;i ++){
+				sum += arrDay[i]
+			}
+			//继续累加第month月的残缺天数
+			sum += day
+			//返回sum
+			return sum
+		}
+	</script>
+</html>

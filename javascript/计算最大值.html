@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var count = 0;
+		var randNumArr = []
+		//产生0---9的随机数
+		var randNum = Math.ceil(Math.random() * 100) % 10 //0--9
+		alert(randNum)
+		do{
+			var inputNum = parseInt(prompt("请输入一个参数："))
+			count ++
+			//把输入的数存储到数组中
+			randNumArr.push(inputNum)
+		}while (randNum != count);
+		
+		//功能：计算参数中的最大值
+		function maxArguments(randNumArr){
+			//【注意】...是展开运算符
+			return Math.max(...arguments)
+		}
+		//函数的调用
+		alert(maxArguments(...randNumArr))
+	</script>
+</html>

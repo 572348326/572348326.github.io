@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入开始年份：<input type="text" id="beginYear"/>
+		请输入结束年份：<input type="text" id="endYear"/>
+		<input type="submit" id="submit" value="打印"/>
+	</body>
+	<script type="text/javascript">
+		submit.onclick = function(){
+			var begin = parseInt(beginYear.value)
+			var end = parseInt(endYear.value)
+			//函数的调用
+			printLeapYear(begin,end)
+		}
+		//判断是否是闰年
+		function isLeapYear(year){
+			if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+				//console.log(year + " ")
+				document.write(year + "<br/>")
+			}
+		}
+		//打印所有的闰年的方法
+		function printLeapYear(begin,end){
+			for(var i = begin;i <= end;i ++){
+				isLeapYear(i)
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				width: 50px;
+				height: 25px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		请输入一个日期：<input type="text" id="inputYear"/> -
+		<input type="text" id="inputMonth"/> -
+		<input type="text" id="inputDay"/>
+		<input type="submit" id="submit" value="判断"/>
+	</body>
+	<script type="text/javascript">
+		submit.onclick = function(){
+			var year = parseInt(inputYear.value)
+			var month = parseInt(inputMonth.value)
+			var day = parseInt(inputDay.value)
+			//函数的调用
+			isRightDate(year,month,day)
+		}
+		//判断是否是闰年
+		function isLeapYear(year){
+			if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+				return true
+			}else{
+				return false
+			}
+		}
+		//判断日期是否合法的函数
+		function isRightDate(year,month,day){
+			//标记
+			var flag01 = false
+			var flag02 = false
+			var flag03 = false
+			//开始判断
+			if(year && year >= 0 && year <= 3000){
+				flag01 = true
+				if(month && month >= 1 && month <= 12){
+					flag02 = true
+					switch(month){
+						case 1:
+						case 3:
+						case 5:
+						case 7:
+						case 8:
+						case 10:
+						case 12:
+							if(day && day >= 1 && day <= 31){
+								flag03 = true
+							}
+							break;
+						case 4:
+						case 6:
+						case 9:
+						case 11:
+							if(day && day >= 1 && day <= 30){
+								flag03 = true
+							}
+							break;
+						case 2:
+							if(isLeapYear(year)){
+								//闰年
+								if(day && day >= 1 && day <= 29){
+									flag03 = true
+								}
+							}else{
+								//平年
+								if(day && day >= 1 && day <= 28){
+									flag03 = true
+								}
+							}
+							break;
+					}
+				}
+			}
+			//结果
+			if(flag01 && flag02 && flag03){
+				alert(year + "-" + month + "-" + day + "是合法的")
+			}else{
+				alert(year + "-" + month + "-" + day + "是不合法的")
+			}
+		}
+	</script>
+</html>
