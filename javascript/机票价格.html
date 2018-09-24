@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			请选择你要飞行的月份：
+			<select id="season">
+				<option value="wj">4,5,6,7,8,9,10月份</option>
+				<option value="dj">1,2,3,11,12月份</option>
+			</select>
+			<select id="type">
+				<option value="top">头等舱</option>
+				<option value="low">经济舱</option>
+			</select>
+			<button id="calc">计算价格</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var selects = document.getElementsByTagName("select")
+		calc.onclick = function(){
+			var season = selects[0].value
+			var type = selects[1].value
+			var init = 4000
+			
+			if(season == "wj"){
+				if(type == "top"){
+					init *= 0.9
+				}else{
+					init *= 0.75
+				}
+			}else{
+				if(type == "top"){
+					init *= 0.6
+				}else{
+					init *= 0.3
+				}
+			}
+			alert("你选择的飞行，需要付款:" + init + "圆")
+		}
+	</script>
+</html>

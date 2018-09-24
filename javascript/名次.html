@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入小名的考试名次: <input type="text" id="examResult"/>
+		<input type="submit"  id="submit" value="提交" />
+	</body>
+	<script type="text/javascript">
+		submit.onclick=function(){
+			var result=Number(examResult.value)
+			if(result){
+				switch(result){
+			case 1:
+				alert("奖励iPhone8")
+				break;
+			case 2:
+				alert("奖励iPhone7")
+				break;
+			case 3:
+				alert("奖励iPhone6")
+				break;
+			case 4:
+				alert("奖励iPhone5")
+				break;
+				default:
+				alert("努力吧！少年")
+				break;
+			}
+			}else{
+				alert("输入错误,请输入一个非0数字")
+			}
+			
+		}
+	</script>
+</html>

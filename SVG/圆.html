@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <svg viewBox="0 0 42 42" width="300" height="300" id="sc">
+<circle cx="25" cy="25" r="15" style="stroke:yellow;fill:none;stroke-width:3"></circle>
+<circle cx="25" cy="25" r="15" style="stroke:orange;fill:none;stroke-width:3;stroke-dasharray:100;stroke-dashoffset:20;">
+   <animate
+   attributeType="xml" attributeName="stroke-dashoffset" from="100" to="20" dur="3s"
+   />
+</circle>
+    </svg>
+</body>
+<style>
+#sc{
+    transform: rotate(-90deg)
+}
+</style>
+</html>

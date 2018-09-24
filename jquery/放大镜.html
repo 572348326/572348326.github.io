@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#s_box{
+				position: relative;
+				display: inline-block;
+				width: 350px;
+				height: 449px;
+				overflow: hidden;
+				top: 20px;
+				left: 20px;
+			}
+			#box{
+				position: absolute;
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				background: rgba(255,255,0,0.5);
+				
+			}
+			#b_box{
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				top: 20px;
+				left: 400px;
+				overflow: hidden;
+			}
+			#b_box>img{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="s_box">
+			<div id="box"></div>
+			<img src="images/small.jpg"/>
+		</div>
+		<div id="b_box">
+			<img src="images/big.jpg" width="1050" height="1347"/>
+		</div>
+		<script type="text/javascript">
+			$(function  () {
+				var pos={x:0,y:0}
+				$('#s_box').on('mousemove',function(e) {
+					var x=e.pageX-70;
+					var y=e.pageY-70;
+					if (x<0) {
+						x=0;
+					} 
+					if (x>250) {
+						x=250
+					}
+					if (y<0) {
+						y=0
+					}else if (y>350) {
+						y=350;
+					}
+					$('#s_box div').css({
+						left:x,
+						top:y
+					});
+					$('#b_box img').css({
+						left:-x*3,
+						top:-y*3
+					})
+				})
+			});
+		</script>
+	</body>
+</html>

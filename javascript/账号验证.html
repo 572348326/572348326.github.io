@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			账号:<input type="text"/> <br />
+			<span></span><br />
+			密码:<input type="password"/ required><br />
+			<span></span><br />
+			手机号码:<input type="text"/><br />
+			<span></span><br />
+			邮箱:<input type="text"/><br />
+			<span></span><br />
+			<input type="submit" value="确认"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var inputs = document.querySelectorAll('input')
+		var spans = document.querySelectorAll('span')
+		document.querySelector('form').onsubmit = function(event){
+			var name = inputs[0].value
+			var reg1 = /^[\D]\w{4,8}$/i
+			if(!reg1.test(name)){
+				event.preventDefault()
+				spans[0].innerHTML = '请输入正确的账号'
+			}
+			var mm = inputs[1].value
+			var reg2 = /\w{6,18}$/i
+			if (!reg2.test(mm)) {
+				event.preventDefault()
+				spans[1].innerHTML = '密码错误,请重新输入!'
+			}
+			var phone = inputs[2].value
+			var reg3=/^[1][34587][0-9]{9}$/i
+			if (!reg3.test(phone)) {
+				event.preventDefault()
+				spans[2].innerHTML = '请输入正确的手机号码'
+			}
+			var m= inputs[3].value
+			var reg4= /^([\w_\.\-]+)@([\da-z\.\-])\.([a-z\.]{2,6})$/i
+			if (!reg4.test(m)) {
+				event.preventDefault()
+				spans[3].innerHTML = '请输入正确的电子邮箱'
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新用户注册页面</title>
+    <link type="text/css" rel="stylesheet" href="css/register.css" />
+</head>
+
+<body>
+<div id="header"><img src="images/register_logo.gif" alt="logo"/></div>
+<div id="main">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="bg bg_top_left"></td>
+            <td class="bg_top"></td>
+            <td class="bg bg_top_right"></td>
+        </tr>
+        <tr>
+            <td class="bg_left"></td>
+            <td class="content">
+                <form id="registerForm" action="" method="post" name="myform">
+                    <dl>
+                        <dt>通行证用户名：</dt>
+                        <dd><input type="text" id="userName" class="inputs userWidth" onblur="t1()"/> @163.com</dd>
+                        <div id="userNameId"></div>
+                    </dl>
+                    <dl>
+                        <dt>登录密码：</dt>
+                        <dd><input type="password" id="pwd" class="inputs" onblur="t2()"/></dd>
+                        <div id="pwdId"></div>
+                    </dl>
+                    <dl>
+                        <dt>重复登录密码：</dt>
+                        <dd><input type="password" id="repwd" class="inputs" onblur="t3()"/></dd>
+                        <div id="repwdId"></div>
+                    </dl>
+                    <dl>
+                        <dt>性别：</dt>
+                        <dd><input name="sex" type="radio" value="" checked="checked"/>男 <input name="sex" type="radio" value="" />女 </dd>
+                    </dl>
+                    <dl>
+                        <dt>真实姓名：</dt>
+                        <dd><input type="text" id="realName" class="inputs" onblur="t4()"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>昵称：</dt>
+                        <dd><input type="text" id="nickName" class="inputs" onblur="t5()"/></dd>
+                        <div id="nickNameId"></div>
+                    </dl>
+                    <dl>
+                        <dt>关联手机号：</dt>
+                        <dd><input type="text" id="tel" class="inputs" onblur="t6()"/></dd>
+                        <div id="telId"></div>
+                    </dl>
+                    <dl>
+                        <dt>保密邮箱：</dt>
+                        <dd><input type="text" id="email" class="inputs" onblur="t7()"/></dd>
+                        <div id="emailId"></div>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd><input name=" " type="image" src="images/button.gif"/></dd>
+                    </dl>
+                </form>
+            </td>
+            <td class="bg_right"></td>
+        </tr>
+        <tr>
+            <td class="bg bg_end_left"></td>
+            <td class="bg_end"></td>
+            <td class="bg bg_end_right"></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script type="text/javascript">
+    function t1() {
+        var reg1=/^[0-9a-zA-Z][\w\-]{2,16}[0-9a-zA-Z]$/
+        if (userName.value == ""){
+            userNameId.innerHTML="<img src='images/li_err.gif'>通行证用户名不能为空,请输入通行证用户名"
+        }else if (!reg1.test(userName.value)){
+            userNameId.innerHTML="<img src='images/li_err.gif'>1、由字母、数字、下划线、点、减号组成<br>2、只能以数字、祖母开头或结尾，且长度为4-18"
+        }else{
+            userNameId.innerHTML="<img src='images/li_ok.gif'>"
+        }
+    }
+    function t2() {
+        var reg2=/^[\w\-]{6,16}$/
+        if (pwd.value == ""){
+            pwdId.innerHTML="<img src='images/li_err.gif'>密码不能为空,请输入密码"
+        }else if (!reg2.test(pwd.value)){
+            pwdId.innerHTML="<img src='images/li_err.gif'>密码长度为6-16"
+        }else{
+            pwdId.innerHTML="<img src='images/li_ok.gif'>"
+        }
+    }
+    function t3() {
+        if (repwd.value == ""){
+            repwdId.innerHTML="<img src='images/li_err.gif'>重复密码不能为空,请重复输入密码"
+        }else if (repwd.value != pwd.value){
+            repwdId.innerHTML="<img src='images/li_err.gif'>两次密码不一致,请重新输入"
+        }else{
+            repwdId.innerHTML="<img src='images/li_ok.gif'>"
+        }
+    }
+    function t4() {
+
+    }
+    function t5() {
+        var reg4=/^[\w\-]{4,20}$/
+        if (nickName.value == ""){
+            nickNameId.innerHTML="<img src='images/li_err.gif'>昵称不能为空,请输入昵称"
+        }else if (!reg4.test(nickName.value)){
+            nickNameId.innerHTML="<img src='images/li_err.gif'>1、长度为4-20个字符"
+        }else{
+            nickNameId.innerHTML="<img src='images/li_ok.gif'>"
+        }
+    }
+    function t6() {
+        var reg5=/^[1][358][0-9]{9}$/
+        if (tel.value == ""){
+            telId.innerHTML="<img src='images/li_err.gif'>关联手机号码不能为空,请输入关联手机号码"
+        }else
+        if (!reg5.test(tel.value)){
+            telId.innerHTML="<img src='images/li_err.gif'>关联手机号码输入不正确,请重新输入"
+        }else{
+            telId.innerHTML="<img src='images/li_ok.gif'>"
+        }
+    }
+    function t7() {
+        var reg6=/^([\w_\.\-]+)@([\da-z\.\-])\.([a-z\.]{2,6})$/
+        if (email.value == ""){
+            emailId.innerHTML="<img src='images/li_err.gif'>保密邮箱不能为空,请输入保密邮箱"
+        }else if (!reg6.test(email.value)){
+            emailId.innerHTML="<img src='images/li_err.gif'>保密邮箱格式不正确,请重新输入"
+        }else{
+            emailId.innerHTML="<img src='images/li_ok.gif'>"
+        }
+    }
+
+</script>
+</html>

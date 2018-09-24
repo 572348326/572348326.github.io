@@ -1,0 +1,79 @@
+html,body{
+	height: 100%;
+}
+.leftList{
+	padding-top: 51px;
+}
+
+.leftListDiv{
+	padding-left: 0px;
+	/*overflow-y: auto;*/
+	padding-right: 0px;
+}
+
+.leftList,.leftList>.row,.leftListDiv{
+	height: 100%;
+}
+
+.leftList .navbar{
+	border-right:0px;
+	margin:0px -15px;
+}
+
+.leftList .nav > li > a{
+	color:#ddd;
+}
+	
+.nav > li > a:hover, .nav > li > a:focus{
+	background-color:#111;
+}
+
+.leftListDiv .list-group{
+	margin-bottom: 0px;
+}
+.leftPanel {
+    background-color: #222;
+    width: 100%;
+    /*border-color: #080808;*/
+}
+.panel-heading a{
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/*修改滚动条的样式*/
+	::-webkit-scrollbar{
+		width:10px;
+		height:1px;
+	}
+	/* 设置滚动条条的样式*/
+	::-webkit-scrollbar-thumb{
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.5);
+		background: #535353;
+	}
+	::-webkit-scrollbar-track{
+		-webkit-box-shadow: inset 0 0 5px rgba(100,100,100,0.2);
+		border-radius: 10px;
+		background: whitesmoke;
+	}
+	
+.listicon{
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.panel .list-group a{
+	padding-left: 30px;
+}
+
+#addUser .panel-footer button{
+	margin-left: 10px;
+}
+
+.rightContent{
+	margin-top: 30px;
+}
