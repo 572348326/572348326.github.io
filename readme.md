@@ -1,7 +1,7 @@
 [美团](http://572348326.github.io/html+css/美团.html)
 [全选全不选](http://572348326.github.io/javascript/全选全不选效果.html)
 [八卦](http://572348326.github.io/html+css/八卦.html)
-<h2>bootstrap</h2><br/>
+bootstrap<br/>
 [index](http://572348326.github.io/bootstrap/index.html)
 [login-1](http://572348326.github.io/bootstrap/index.html)
 [组件](http://572348326.github.io/bootstrap/组件.html)
