@@ -65,7 +65,6 @@ jquery<br/>
 [index](http://572348326.github.io/jquery/垃圾桶/index.html)<br/>
 [1dropdown-menu](http://572348326.github.io/jquery/1dropdown-menu.html)<br/>
 [2.scrollspy](http://572348326.github.io/jquery/2.scrollspy.html)<br/>
-[4.collapse折叠效果/显示隐藏效果](http://572348326.github.io/jquery/4.collapse折叠效果显示隐藏效果.html)<br/>
 [5.tab切换](http://572348326.github.io/jquery/5.tab切换.html)<br/>
 [5.图片切换](http://572348326.github.io/jquery/5.图片切换.html)<br/>
 [7.popover](http://572348326.github.io/jquery/7.popover.html)<br/>
