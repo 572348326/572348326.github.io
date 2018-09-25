@@ -1,0 +1,13 @@
+html,body,ul{
+     margin: 0;
+     padding: 0;
+ }
+ul{
+    list-style: none;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+}

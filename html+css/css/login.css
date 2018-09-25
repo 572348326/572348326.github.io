@@ -1,0 +1,161 @@
+.nk-main{
+    padding-top: 70px;
+    margin: 0 auto;
+    width: 960px;
+}
+.nk-main .wrapper{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.nk-main .wrapper .tabbed {
+    height: 84px;
+    background: #f0f0f0;
+}
+.nk-main .wrapper .tabbed li{
+    float: left;
+    width: 50%;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+}
+.nk-main .wrapper .tabbed li i,
+.nk-main .wrapper .tabbed li a{
+    color: #00BC9B;
+    font-size: 26px;
+}
+.nk-main .wrapper .tabbed li i {
+    margin-right: 12px;
+}
+.nk-main .wrapper .tabbed .tab-selected{
+    background: #fff !important;
+    border-top: 2px solid #00BC9B !important;
+}
+.nk-main .wrapper .wrapper-container{
+    margin: 0 auto;
+    padding: 60px;
+    /*border-top: 2px solid #aaa; // TODO*/
+}
+.nk-main .wrapper .wrapper-container .wrapper-l{
+    width: 400px;
+}
+.nk-main .wrapper .wrapper-l .form-group{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+}
+.nk-main .wrapper .wrapper-l .form-group .form-label{
+    display: inline-block;
+    padding: 0 15px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+.nk-main .wrapper .wrapper-l .form-group .form-input{
+    padding: 8px 5px 7px;
+    width: 248px;
+    height: 22px;
+    /*border-radius: 3px;*/ // TODO
+    color: #ccc;
+}
+.nk-main .wrapper .wrapper-l .about-pwd{
+    margin-left: 110px;
+}
+.nk-main .wrapper .wrapper-l .about-pwd .forget-pwd{
+    float: right;
+}
+.nk-main .wrapper .wrapper-l .form-group .form-login{
+    margin-left: 110px;
+    margin-right: 20px;
+}
+.nk-main .wrapper .wrapper-l .form-group .form-login .login-btn{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    border: none 0;
+    background: #00BC9B;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+}
+/*.nk-main .wrapper .wrapper-container {*/
+    /*padding: 60px;*/
+    /*margin: 0 auto;*/
+    /*border-top: 1px solid #ededed;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-container .wrapper-l{*/
+    /*width: 400px;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-container .wrapper-l .form-group{*/
+    /*margin-bottom: 20px;*/
+    /*font-size: 14px;*/
+    /*color: #333;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .form-group .form-label{*/
+    /*display: inline-block;*/
+    /*padding: 0 15px;*/
+    /*width: 80px;*/
+    /*height: 42px;*/
+    /*text-align: right;*/
+    /*line-height: 42px;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .form-group .form-input {*/
+    /*padding: 8px 5px 7px;*/
+    /*width: 248px;*/
+    /*height: 22px;*/
+    /*color: #34495e;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .form-group .form-login{*/
+    /*margin-left: 120px;*/
+    /*margin-right: 20px;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .form-group .login-btn{*/
+    /*display: inline-block;*/
+    /*padding: 10px 0;*/
+    /*width: 100%;*/
+    /*background: #00BC9B;*/
+    /*border: none 0;*/
+    /*border-radius: 3px;*/
+    /*color: #fff;*/
+    /*text-align: center;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .form-group .forget-pwd{*/
+    /*float: right;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .form-group .forget-pwd:hover{*/
+    /*color: #00BC9B;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-l .about-pwd {*/
+    /*margin-left: 120px;*/
+/*}*/
+.nk-main .wrapper  .wrapper-container .wrapper-r{
+    width: auto;
+}
+
+/*.nk-main{*/
+    /*margin: 0 auto;*/
+    /*width: 960px;*/
+    /*height: 800px;*/
+    /*padding-top: 70px;*/
+    /*padding-bottom: 250px;*/
+/*}*/
+/*.nk-main .wrapper {*/
+    /*border: 1px solid #d6d6d6;*/
+    /*border-radius: 4px;*/
+    /*background: #fff;*/
+/*}*/
+/*.nk-main .wrapper .tabbed ul li{*/
+    /*float: left;*/
+    /*width: 50%;*/
+    /*height: 84px;*/
+    /*line-height: 84px;*/
+    /*text-align: center;*/
+/*}*/
+/*.nk-main .wrapper .tabbed li .tab-selected{*/
+    /*background: #fff;*/
+    /*border-top: 2px solid #00BC9B;*/
+/*}*/
+/*.nk-main .wrapper .wrapper-container {*/
+    /*height: 800px;*/
+/*}*/

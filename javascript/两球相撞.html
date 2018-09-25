@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会滚动的小球</title>
+    <style>
+        body{
+            margin:0;
+            background:lightgreen;
+            height:500px;
+
+        }
+        .stage{
+            width:400px;
+            height:400px;
+            border:5px solid black;
+           margin:100px auto;
+            position: relative;
+        }
+
+        .box {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="stage"></div>
+</body>
+<script>
+    var Ball=function(x,y,colo,speed){
+        this.box=document.createElement("div");
+        this.box.className='box';
+        this.box.style.left=x+'px';
+        this.box.style.top=y+'px';
+        this.box.style.backgroundColor=colo;
+        document.querySelector("div").appendChild(this.box);
+        this.positionX=parseInt(this.box.style.left);
+        this.positionY=parseInt(this.box.style.top);
+        this.direction='right';
+        this.speed=speed;
+    };
+    Ball.prototype.moveRight=function(){
+        this.positionX+=this.speed;
+        this.box.style.left=this.positionX+'px';
+    }
+    Ball.prototype.moveBottom=function(){
+        this.positionY+=this.speed;
+        this.box.style.top=this.positionY+'px';
+    }
+    Ball.prototype.moveLeft=function(){
+        this.positionX-=this.speed;
+        this.box.style.left=this.positionX+'px';
+    }
+    Ball.prototype.moveTop=function(){
+        this.positionY-=this.speed;
+        this.box.style.top=this.positionY+'px';
+    }
+    Ball.prototype.checkCollision=function(){
+        if(this.positionX<=0){
+            this.direction='right';
+        }else if(this.positionX>=400-20){
+            this.direction='left';
+
+        }else if(this.positionY<=0){
+            this.direction='down';
+        }else if(this.positionY>=400-20){
+            this.direction='up';
+        }
+    };
+    Ball.prototype.time=function(){
+        this.checkCollision();
+        if(this.direction==='right'){
+            this.moveRight();
+        }else if(this.direction==='left'){
+            this.moveLeft();
+        }else if(this.direction==='down'){
+            this.moveBottom();
+
+        }else if(this.direction==='up'){
+            this.moveTop();
+        }
+    }
+    document.body.onkeydown = function(ev) {
+           console.log(ev.keyCode)
+        switch(ev.keyCode) {
+            case 37:
+                redball.direction = 'left';
+                break;
+            case 38:
+                redball.direction = 'up';
+                break;
+            case 39:
+                redball.direction = 'right';
+                break;
+            case 40:
+                redball.direction = 'down';
+                break;
+            case 65:
+                blueball.direction = 'left';
+                break;
+            case 87:
+                blueball.direction = 'up';
+                break;
+            case 68:
+                blueball.direction = 'right';
+                break;
+            case 83:
+                blueball.direction = 'down';
+                break;
+            case 70:
+               greenball.direction = 'left';
+                break;
+            case 84:
+                greenball.direction = 'up';
+                break;
+            case 72:
+                greenball.direction = 'right';
+                break;
+            case 71:
+                greenball.direction = 'down';
+                break;
+            default:
+                return;
+        }
+    };
+    var id = setInterval(function() {
+        redball.time();
+        blueball.time();
+        greenball.time();
+    }, 1);
+    redball = new Ball(150, 200, 'red', 1);
+    blueball = new Ball(50, 50, 'blue', 1)
+   greenball = new Ball(100, 100, 'green', 1)
+</script>
+</html>

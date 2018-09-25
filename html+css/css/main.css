@@ -1,0 +1,5 @@
+@import url(child.css); /* 最后一定要加";"分号*/
+
+span {
+    color: #fc0;
+}
