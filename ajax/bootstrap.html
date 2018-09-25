@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- https://www.apiopen.top/satinApi?type=1&page=1-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="demo">
+        </div>
+
+        <button type="button" class="btn btn-danger center-block more" onclick="getxiaohu()">（危险）Danger</button>
+    </div>
+    <script>
+            var typeNum = 1;
+            var pageNum = 1;
+            // var uid = 1;
+        function getxiaohu() {
+            
+            $.get("https://www.apiopen.top/satinApi", {
+                    type: typeNum,
+                    page: pageNum
+                },
+                function (data, textStatus, jqXHR) {
+                    //  console.log(data.data);
+                    var arr = data.data;
+                    console.log(arr);
+
+                    $.each(arr, function (indexInArray, valueOfElement) {
+                        // console.log(valueOfElement)
+                        $('.demo').append('<img src="'+valueOfElement.profile_image+'">'+
+                        '<div class="v1"><span>'+valueOfElement.name+'</span><i><br>'+
+                        valueOfElement.created_at+'</div></i>'+'<p id="v2">'+valueOfElement.text+
+                        '</p>')
+
+                            
+                    });
+                    // uid += 20;
+                    pageNum++;
+                    
+                }
+               
+            );
+
+        }
+        getxiaohu();
+        var scrollDon=true;
+        document.body.onscroll=function(ev){
+            if(window.pageYOffset>($('.more').offset().top-window.innerHeight+$('.more').height())){
+               if(scrollDon===true) {
+                scrollDon=false;
+                getxiaohu();
+                setTimeout(function(){
+                    scrollDon=true;
+                },200)
+               }
+            }
+        }
+        $('div').scrollTop(function(){
+
+        })
+    </script>
+    <style>
+        .demo{
+            margin:10px;
+            border: 1px solid #817f7f;
+            width: 700px;
+            height: 500px;
+            overflow:scroll;
+            background:rgb(252, 214, 214);
+        }
+        img{
+            top: 12px;
+            width: 100px;
+            height: 100px;
+            margin-left: 10px;
+            margin-bottom:52px;
+            position: relative
+        }
+        .v1{
+            margin-left: 114px;
+           margin-top: -114px;
+           
+        }
+        #v2{
+           width: 220px;
+            padding: 15px;
+            border-radius:5px;
+            background: rgb(44, 44, 233);
+            margin-left:150px;
+            margin-top: 62px;
+
+        }
+        .more{
+            width: 119px;
+            height: 34px;
+            padding: 6px;
+            margin-left:276px;
+        }
+    </style>
+</body>
+
+</html>
