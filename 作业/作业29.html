@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				position: relative;
+				margin: auto;
+				width: 960px;
+				height: 300px;
+				overflow: hidden;
+			}
+			span{
+				z-index: 1;
+				position: absolute;
+				top: 130px;
+				height: 30px;
+				width: 60px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 14px;
+				background: white;
+				background: #666;
+				color: white;
+			}
+			span:hover{
+				background: red;
+			}
+			.l{
+				left: 1px;
+			}
+			.r{
+				right:1px;
+			}
+			ul{
+				position: absolute;
+				list-style: none;
+				left: 42%;
+				bottom: 20px;
+				z-index: 1;
+			}
+			ul>li{
+				float: left;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				background: white;
+				border-radius: 50%;
+				color: white;
+				margin: 0 5px;
+			}
+			ul>li:hover,.lih{
+				background: red;
+			}
+			img{
+				position: absolute;
+				float: left;
+				width: 960px;
+				height: 300px;
+			}
+			#box>div{
+				position: absolute;
+				z-index: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<span class="l">上一页</span>
+			<span class="r">下一页</span>
+			<ul>
+				<li class="lih" >1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<div>
+				<img src="images/1.jpg" style="z-index: 3;"/>
+				<img src="images/2.jpg" />
+				<img src="images/3.jpg"/>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function () {
+				$('ul>li').hover(function () {
+					var i=$(this).index()
+					$('div>img').eq(i).stop().fadeIn(1500).siblings().stop().fadeOut(1500)
+					$(this).addClass('lih').siblings().removeClass('lih')
+				});
+				$("span:first").click(function () { 
+					var j=$('ul').children('.lih').index();
+					--j
+					if(j<0){
+						j=2
+					}
+					$('div>img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
+					$('ul>li').eq(j).addClass('lih').siblings().removeClass('lih')
+					window.clearInterval(a);
+				});
+				$("span:last").click(function () { 
+					var j=$('ul').children('.lih').index();
+					++j
+					if(j>2){
+						j=0
+					}
+					$('div>img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
+					$('ul>li').eq(j).addClass('lih').siblings().removeClass('lih')
+					window.clearInterval(a);
+				});
+				function use() {
+					var j=$('ul').children('.lih').index();
+					j++
+					if(j>2){
+						j=0
+					}
+					$('div>img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
+					$('ul>li').eq(j).addClass('lih').siblings().removeClass('lih')
+				}
+				$("div>img").on('mouseenter',function() {
+					window.clearInterval(a);
+				}).on('mouseleave',function () {
+					a=setInterval(use,3000)
+				})
+				var a=window.setInterval(use,3000)
+			});
+		</script>
+	</body>
+</html>
