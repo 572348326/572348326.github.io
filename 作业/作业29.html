@@ -9,43 +9,47 @@
 				margin: 0;
 				padding: 0;
 			}
-			#box{
+			div{
+				position: absolute;
+				z-index: 0;
+			}
+			#bigbox{
 				position: relative;
 				margin: auto;
-				width: 960px;
-				height: 300px;
+				width: 550px;
+				height: 280px;
 				overflow: hidden;
 			}
 			span{
 				z-index: 1;
 				position: absolute;
 				top: 130px;
-				height: 30px;
-				width: 60px;
+				height: 25px;
+				width: 40px;
 				text-align: center;
-				line-height: 30px;
-				font-size: 14px;
+				line-height: 25px;
+				font-size: 10px;
 				background: white;
 				background: #666;
 				color: white;
 			}
 			span:hover{
-				background: red;
+				background: rgb(163, 161, 161);
 			}
-			.l{
-				left: 1px;
+			#previous{
+				left: 0px;
 			}
-			.r{
-				right:1px;
+			#next{
+				right:0px;
 			}
 			ul{
 				position: absolute;
 				list-style: none;
 				left: 42%;
-				bottom: 20px;
+				bottom: 5px;
 				z-index: 1;
 			}
-			ul>li{
+			li{
 				float: left;
 				width: 20px;
 				height: 20px;
@@ -55,7 +59,7 @@
 				color: white;
 				margin: 0 5px;
 			}
-			ul>li:hover,.lih{
+			li:hover,.paging{
 				background: red;
 			}
 			img{
@@ -64,64 +68,61 @@
 				width: 960px;
 				height: 300px;
 			}
-			#box>div{
-				position: absolute;
-				z-index: 0;
-			}
+			
 		</style>
 	</head>
 	<body>
-		<div id="box">
-			<span class="l">上一页</span>
-			<span class="r">下一页</span>
+		<div id="bigbox">
+			<span id="previous">上一页</span>
+			<span id="next">下一页</span>
 			<ul>
-				<li class="lih" >1</li>
+				<li class="paging" >1</li>
 				<li>2</li>
 				<li>3</li>
 			</ul>
 			<div>
-				<img src="images/1.jpg" style="z-index: 3;"/>
+				<img src="images/1.jpg"/>
 				<img src="images/2.jpg" />
 				<img src="images/3.jpg"/>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(function () {
-				$('ul>li').hover(function () {
+				$('li').hover(function () {
 					var i=$(this).index()
-					$('div>img').eq(i).stop().fadeIn(1500).siblings().stop().fadeOut(1500)
-					$(this).addClass('lih').siblings().removeClass('lih')
+					$('img').eq(i).stop().fadeIn(1500).siblings().stop().fadeOut(1500)
+					$(this).addClass('paging').siblings().removeClass('paging')
 				});
 				$("span:first").click(function () { 
-					var j=$('ul').children('.lih').index();
+					var j=$('ul').children('.paging').index();
 					--j
 					if(j<0){
 						j=2
 					}
-					$('div>img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
-					$('ul>li').eq(j).addClass('lih').siblings().removeClass('lih')
+					$('img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
+					$('li').eq(j).addClass('paging').siblings().removeClass('paging')
 					window.clearInterval(a);
 				});
 				$("span:last").click(function () { 
-					var j=$('ul').children('.lih').index();
+					var j=$('ul').children('.paging').index();
 					++j
 					if(j>2){
 						j=0
 					}
-					$('div>img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
-					$('ul>li').eq(j).addClass('lih').siblings().removeClass('lih')
+					$('img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
+					$('li').eq(j).addClass('paging').siblings().removeClass('paging')
 					window.clearInterval(a);
 				});
 				function use() {
-					var j=$('ul').children('.lih').index();
+					var j=$('ul').children('.paging').index();
 					j++
 					if(j>2){
 						j=0
 					}
-					$('div>img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
-					$('ul>li').eq(j).addClass('lih').siblings().removeClass('lih')
+					$('img').eq(j).stop().fadeIn(1000).siblings().stop().fadeOut(1000)
+					$('li').eq(j).addClass('paging').siblings().removeClass('paging')
 				}
-				$("div>img").on('mouseenter',function() {
+				$("img").on('mouseenter',function() {
 					window.clearInterval(a);
 				}).on('mouseleave',function () {
 					a=setInterval(use,3000)
