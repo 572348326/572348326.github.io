@@ -89,4 +89,7 @@
 [圆](http://572348326.github.io/SVG/圆.html)<br/>
 ## AJAX<br>
 [bootstrap](http://572348326.github.io/ajax/bootstrap.html)<br/>
-## jqueryce'shi
+## jquery作业
+[作业27](http://572348326.github.io/作业/作业27.html)<br/>
+[作业27](http://572348326.github.io/作业/作业28.html)<br/>
+[作业27](http://572348326.github.io/作业/作业29.html)<br/>
