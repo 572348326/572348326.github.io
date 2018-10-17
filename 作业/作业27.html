@@ -8,37 +8,65 @@
 				width: 500px;
 				margin: 10px;
 			}
-			.add{
-				background: yellow;
-			}
-			tr:first{
-				background: #8C8C8C;
-			}
 			
+			/* tr:first-of-type	{
+				background: #CDCDCD;
+			}
+			tr:nth-child(even){
+				background: rgb(94, 185, 247);
+			} */
+			tr:first-of-type{
+				background-color:#CDCDCD;
+			}
+			.even{
+	background-color:#FFFFCD;
+	}
+.odd{
+	background-color:#CDCDFFFF;	
+		}
+	
+	.input1{
+		background:yellow;
+		}
+
 		</style>
 		 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<table border="1" cellspacing="0" cellpadding="">
 			<caption>员工信息</caption>
-			<tr id="q"><th></th><th>姓名</th><th>薪水</th><th>年龄</th></tr>
-			<tr><td><input type="checkbox"></td><td>张三</td><td>20000</td><td>23</td></tr>
+			<tr><th></th><th>姓名</th><th>薪水</th><th>年龄</th></tr>
+			<tr><td><input type="checkbox" ></td><td>张三</td><td>20000</td><td>23</td></tr>
 			<tr><td><input type="checkbox"></td><td>李四</td><td>22000</td><td>22</td></tr>
 			<tr><td><input type="checkbox"></td><td>王五</td><td>14000</td><td>26</td></tr>
 			<tr><td><input type="checkbox"></td><td>马六</td><td>15000</td><td>21</td></tr>
 		</table>
 	</body>
 	<script type="text/javascript">
-		$('tr:eq(0)').css('background','#8C8C8C')
-		
+
+		// $(function(){
+		// 	$('[type="checkbox"]').change(function(){
+		// 		if(this.checked){
+		// 			$(this).parent().parent().css("background","red");
+		// 		}else{
+		// 			$(this).parent().parent().remove("background","red");
+		// 		}
+		// 	})
+		// })
 		$(function(){
-			$('[type="checkbox"]').change(function(){
-				if(this.checked){
-					$(this).parent().parent().addClass('add');
-				}else{
-					$(this).parent().parent().removeClass('add');
+			$("tr:even").addClass("even");
+			$("tr:odd").addClass("odd");
+});
+$('[type="checkbox"]').each(function(){
+		$(this).click(function(){
+			if(this.checked==true){
+			$(this).parent().parent().addClass("input1");
+			}
+			if(this.checked==false){
+				$(this).parent().parent().removeClass("input1");
 				}
-			})
-		})
+			});
+		});
+
 	</script>
 </html>
