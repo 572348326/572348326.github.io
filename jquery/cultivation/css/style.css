@@ -48,7 +48,7 @@ body{
 .logo {
   border-top: 5px solid#fff;
   border-bottom: 5px solid#fff;
-  width: 28%;
+  width: 34%;
   margin: 15em auto 0;
 }
 .logo a {
@@ -778,8 +778,8 @@ a.b-home:hover{
 .contact-head span{
 	color: #777;
 }
-.contact-map iframe{
-	min-height:300px;
+.contact-map img{
+	height:340px;
 	width:100%;
 	border:none;
 	margin:1.5em 0 1em;
