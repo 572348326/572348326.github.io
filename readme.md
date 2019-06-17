@@ -64,6 +64,7 @@
 [账号验证](http://572348326.github.io/javascript/账号验证.html)<br/>
 [字符串](http://572348326.github.io/javascript/字符串.html)<br/>
 [两球相撞](http://572348326.github.io/javascript/两球相撞.html)<br/>
+[两球相撞](http://572348326.github.io/javascript/cultivation/index.html)<br/>
 ## jquery<br/>
 [index](http://572348326.github.io/jquery/垃圾桶/index.html)<br/>
 [index](http://572348326.github.io/jquery/cultivation/index.html)<br/>
